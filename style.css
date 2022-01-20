@@ -1,0 +1,72 @@
+
+/* setting background attributes */
+body {
+   background-image: url("image.1.jpg");
+   /* background-repeat: no-repeat;
+   background-attachment: fixed; */
+   background-size: 100% 100%;
+   overflow: hidden;
+}
+/* setting player attributes */
+.player {
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    height: 10px;
+    /* width: 100px; */
+    position: absolute;
+    bottom: 215;
+    left: 60;
+    }
+
+#scoreCan{
+    border: ipx solid black;
+}
+/* setting hurdle attributes */
+.hurdle {
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    height: 10px;
+    /* width: 100px; */
+    position: absolute;
+    bottom: 185;
+    left: 500;
+    
+}
+/* hidding game over tag till hurdle and player collides */
+.gameOver{
+    visibility: hidden;
+}
+
+/* creating player annimation */
+.animatePlayer{
+    animation: player 1s linear
+}
+
+/* creating annimation for hurdle , by making it infinite it will keep moving */
+.animateDragon{
+    animation: animateDragon 3s linear infinite;
+}
+
+/* player animation  */
+@keyframes player{
+    0%{
+        bottom: 208;
+    }
+    50%{
+         bottom: 450;
+    }
+    100%{
+          bottom: 208;
+    }
+}
+
+/* hurdle's animation */
+@keyframes animateDragon{
+    0%{
+        left: 100vw
+    }
+    100%{
+        left: -10vw;
+    }
+    
+}
