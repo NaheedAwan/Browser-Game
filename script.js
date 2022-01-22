@@ -10,24 +10,23 @@ document.onkeydown = function (e) {
 
     // moving character upward
     if (e.keyCode === 38) {
-        player = document.querySelector('.player');
-        player.classList.add('animatePlayer')
+        document.querySelector('.player').classList.add('animatePlayer')
         setTimeout(() => {
             player.classList.remove('animatePlayer')
         }, 1000)
     }
 
     // moving character forward
-    if (e.keyCode === 39) {
+    else if (e.keyCode === 39) {
         player = document.querySelector('.player');
-        playerX = parseInt(window.getComputedStyle(player, null).getPropertyValue('left'))
+        playerX = parseInt(window.getComputedStyle(player).getPropertyValue('left'))
         player.style.left = playerX + 80 + 'px'
     }
 
     //moving character backward
-    if (e.keyCode === 37) {
+    else if (e.keyCode === 37) {
         player = document.querySelector('.player');
-        playerX = parseInt(window.getComputedStyle(player, null).getPropertyValue('left'))
+        playerX = parseInt(window.getComputedStyle(player).getPropertyValue('left'))
         player.style.left = playerX - 80 + 'px'
     }
 }
@@ -41,8 +40,9 @@ setInterval(() => {
     hurdle = document.querySelector('.hurdle')
     // score = document.querySelector('#scoreCan')
 
-    pX = x = parseInt(window.getComputedStyle(player, null).getPropertyValue('left'))
-    pY = y = parseInt(window.getComputedStyle(player, null).getPropertyValue('top'))
+    pX  = parseInt(window.getComputedStyle(player, null).getPropertyValue('left'))
+    
+    pY  = parseInt(window.getComputedStyle(player, null).getPropertyValue('top'))
 
     hX = parseInt(window.getComputedStyle(hurdle, null).getPropertyValue('left'))
     hY = parseInt(window.getComputedStyle(hurdle, null).getPropertyValue('top'))
@@ -70,9 +70,9 @@ setInterval(() => {
         }, 1000)
 
         // after everycross over decrease duration of hurdle
-        // decreaseDuration = a = parseFloat(window.getComputedStyle(hurdle, null).getPropertyValue('animation'))
+        // decreaseDuration = a = parseFloat(window.getComputedStyle(hurdle, null).getPropertyValue('animation.duration'))
         // newDuration = b = a - 0.8
-        // hurdle.style.animation = b + 's'
+        // hurdle.style.animationDuration = b + 's'
 
     }
 
@@ -81,6 +81,17 @@ setInterval(() => {
 // function for updating scores
 
 function updateScore(score) {
-    scoreCan = document.querySelector('#scoreCan')
-    scoreCan.innerHTML = "Your score:" + score
+    scoreContainer = document.querySelector('#scoreContainer')
+    scoreContainer.innerHTML = "Your score:" + score
 }
+
+// restart = document.getElementById("#restartButton").addEventListener("click", gameRestart)
+
+// function gameRestart(){
+//     location.reload();
+
+//  }
+
+function fun() {
+    location.reload();
+    }

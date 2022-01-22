@@ -9,7 +9,7 @@ body {
 }
 /* setting player attributes */
 .player {
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     /* background-size: cover; */
     height: 10px;
     /* width: 100px; */
@@ -18,33 +18,44 @@ body {
     left: 60;
     }
 
-#scoreCan{
-    border: ipx solid black;
+#scoreContainer{
+    /* border: 1px solid black; */
+    text-align: center;
+    text-decoration: solid;
+    text-decoration-color: crimson;
+    font-weight: 400;
+    font-family: fantasy ;
+    text-underline-position: below;
+}
+#restart{
+    text-align: right;
 }
 /* setting hurdle attributes */
 .hurdle {
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     /* background-size: cover; */
     height: 10px;
-    /* width: 100px; */
     position: absolute;
     bottom: 185;
     left: 500;
     
 }
-/* hidding game over tag till hurdle and player collides */
+/* hidding game over till hurdle and player collides */
 .gameOver{
     visibility: hidden;
+    text-align: center;
+    font-family: fantasy ;
+    color: crimson;
 }
 
-/* creating player annimation */
+/* creating player animation */
 .animatePlayer{
-    animation: player 1s linear
+    animation: player 1.2s linear
 }
-
 /* creating annimation for hurdle , by making it infinite it will keep moving */
 .animateDragon{
     animation: animateDragon 3s linear infinite;
+    animation-direction: alternate;
 }
 
 /* player animation  */
@@ -53,7 +64,7 @@ body {
         bottom: 208;
     }
     50%{
-         bottom: 450;
+         bottom: 500;
     }
     100%{
           bottom: 208;
