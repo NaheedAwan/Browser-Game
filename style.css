@@ -55,7 +55,7 @@ body {
 /* creating annimation for hurdle , by making it infinite it will keep moving */
 .animateDragon{
     animation: animateDragon 3s linear infinite;
-    animation-direction: alternate;
+    /* animation-direction: alternate; */
 }
 
 /* player animation  */
