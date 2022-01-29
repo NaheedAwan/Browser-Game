@@ -1,6 +1,3 @@
-// creating Global Variables
-score = 0
-cross = true;
 
 // creatin window reload function to restart game
 function fun() {
@@ -12,6 +9,9 @@ audio.play()
 
 audio2 = new Audio('gameOver2.m4a')
 audio2.pause()
+
+audio3 = new Audio('gameWon3.m4a')
+audio3.pause()
 
 // creating an alert
 function myAlert(){
@@ -47,26 +47,28 @@ document.onkeydown = function (e) {
     }
 }
 
-// Detection of collision and announcing Game Over
 
+// creating Global Variables
+score = 0
+cross = true;
 
 setInterval(() => {
     const player = document.querySelector('.player');
     const gameOver = document.querySelector('.gameOver');
     const hurdle = document.querySelector('.hurdle')
+    const gameWon = document.querySelector('.gameWon')
 
-    // detecting players position around x and y axis
+    // detecting red character position around x and y axis
     pX = parseInt(window.getComputedStyle(player).getPropertyValue('left'))
     pY = parseInt(window.getComputedStyle(player).getPropertyValue('top'))
 
-    // deteccting hurdle position around x and y axis
+    // deteccting green character position around x and y axis
     hX = parseInt(window.getComputedStyle(hurdle).getPropertyValue('left'))
     hY = parseInt(window.getComputedStyle(hurdle).getPropertyValue('top'))
 
     // adding Math.abs to calculate offset values
     X = Math.abs(pX - hX)
     Y = Math.abs(pY - hY)
-    // console.log(Y, X)
 
     //  If collision Detected make game over visible
     if (X < 80 && Y < 40) {
@@ -83,7 +85,7 @@ setInterval(() => {
         score += 1
         updateScore(score)
         cross = false;
-
+       console.log(score)
         // making cross true again after 1 sec to update score accurately otherwise it kept on updating 
         setTimeout(() => {
             cross = true;
@@ -96,10 +98,13 @@ setInterval(() => {
             hurdle.style.animationDuration = newDuration + 's'
             console.log(duration, newDuration)
         }
-        if (score === 4) {
-            gameWon.style.visibility = 'visible'
-            hurdle.classList.remove("animateDragon")
-        }
+        // if (score == 14) {
+        //     gameWon.style.visibility = 'visible'
+        //     hurdle.classList.remove("animateDragon")
+        //     audio.pause()
+        //     audio2.pause()
+        //     audio3.play()
+        // }
     }
   
 }, 10)
