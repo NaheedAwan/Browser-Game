@@ -13,8 +13,8 @@ ________________________________________________________________________________
             . ```Red character```(still)
 4. The Goal is to save collision of green and red character , for that we can jump up and move left and rigth Red character.
 5. We use arrow keys to control red character to move , and save it from collison.
-6. The speed of Green character is constantly increasing.
-7. Game will be over in case of collision.
+6. The challenge is speed of Green character is constantly increasing.
+7. Game will be over once collide.
 
                   
 
@@ -24,4 +24,3 @@ Dragon Castle by Makai Symphony | https://soundcloud.com/makai-symphony
 Music promoted by https://www.chosic.com/free-music/all/
 Creative Commons CC BY-SA 3.0
 https://creativecommons.org/licenses/by-sa/3.0/
- 
