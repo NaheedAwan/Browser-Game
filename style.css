@@ -1,12 +1,12 @@
 /* media queries */
 @media screen and (min-width:500px){
-    alert not supported
+    
 }
 /* setting background attributes */
 body {
    background-image: url("image.1.jpg");
-   /* background-repeat: no-repeat;
-   background-attachment: fixed; */
+   background-repeat: no-repeat;
+   background-attachment: fixed;
    background-size: 100% 100%;
    overflow: hidden;
 }
@@ -21,9 +21,8 @@ body {
     left: 60;
     
     }
-
-#scoreContainer{
-    /* border: 1px solid black; */
+/* Styling score Card */
+#scoreCard{
     text-align: center;
     text-decoration: solid;
     text-decoration-color: crimson;
@@ -31,16 +30,23 @@ body {
     font-family: fantasy ;
     text-underline-position: below;
 }
-.restart{
-    text-align: center;
-}
 #restart{
 
     border: 1px solid coral;
     background-color: darkcyan;
     position:fixed;
-    left:48%
-
+    left:48%;
+    font-family: fantasy;
+    text-decoration-color: red;
+}
+/* styling info */
+#info{
+    text-align:right;
+    left:1%;
+    top:1%;
+    background-color: darkkhaki;
+    position: absolute;
+    font-size: .6em;
 }
 /* setting hurdle attributes */
 .hurdle {
@@ -51,7 +57,7 @@ body {
     left: 500;
     
 }
-/* hidding game over till hurdle and player collides */
+/* styling game over */
 .gameOver{
     visibility: hidden;
     text-align: center;
@@ -70,22 +76,13 @@ body {
     visibility: hidden;
 } */
 
-/* creating player animation */
+/* Red character animation */
 .animatePlayer{
     animation: player;
     animation-duration:1.2s ; 
     animation-timing-function:linear;
 }
-/* creating annimation for hurdle , by making it infinite it will keep moving */
-.animateDragon{
-    animation: animateDragon;
-    animation-duration: 2.4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: alternate;
-}
 
-/* player animation  */
 @keyframes player{
     0%{
         bottom: 208;
@@ -99,8 +96,15 @@ body {
 
     }
 }
+/* Greeen character animation */
+.animateDragon{
+    animation: animateDragon;
+    animation-duration: 2.4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
 
-/* hurdle's animation */
 @keyframes animateDragon{
     0%{
         left: 100vw

@@ -1,6 +1,5 @@
 // creating Global Variables
 score = 0
-// creating Boolean variable
 cross = true;
 
 // creatin window reload function to restart game
@@ -8,8 +7,16 @@ function fun() {
     location.reload();
 }
 // attaching audio files
-audio = new Audio('Dragon-Castle.mp3')
+audio = new Audio('gamePlay.m4a')
 audio.play()
+
+audio2 = new Audio('gameOver2.m4a')
+audio2.pause()
+
+// creating an alert
+function myAlert(){
+    alert("This game can only be played on laptops and desktops, not designed for small devices\n Only children ages 4-8 can play")
+}
 
 // creating on keyDown function for arrows keys
 
@@ -66,6 +73,8 @@ setInterval(() => {
         gameOver.style.visibility = 'visible'
         hurdle.classList.remove("animateDragon")
         audio.pause()
+        audio2.play()
+        // myAlert()
     }
  
 
@@ -98,8 +107,8 @@ setInterval(() => {
 // function for updating scores
 
 function updateScore(score) {
-    scoreContainer = document.querySelector('#scoreContainer')
-    scoreContainer.innerHTML = "Your score:" + score
+    scoreCard = document.querySelector('#scoreCard')
+    scoreCard.innerHTML = "Your score:" + score
 
 
 }
