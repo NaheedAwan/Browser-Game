@@ -1,0 +1,26 @@
+__________________________________________________________________________________________                             
+                              Dragon Mania
+__________________________________________________________________________________________
+ This is very simple and very first game I made for my son Suleman. Good thing is he loved the game 
+ and he master it in no time.
+ This game is for ages 6-8.
+
+ HOW TO PLAY:
+1. First we need to upload to browser , either by connecting through ```live server ```, ```npm install and npm start``` or ```npxserve.```.
+2. This game is designed for ```laptops```, ``` desktops```, cannot play on small devices, or ipads.
+3. Once you ```Restart``` the game , you can see two characters 
+            . ```Green character```(which is moving)
+            . ```Red character```(still)
+4. The Goal is to save collision of green and red character , for that we can jump up and move left and rigth Red character.
+5. We use arrow keys to control red character to move , and save it from collison.
+6. The challenge is speed of Green character is constantly increasing.
+7. Game will be over once collide.
+
+                  
+
+mp3 track credits
+
+Dragon Castle by Makai Symphony | https://soundcloud.com/makai-symphony
+Music promoted by https://www.chosic.com/free-music/all/
+Creative Commons CC BY-SA 3.0
+https://creativecommons.org/licenses/by-sa/3.0/
