@@ -56,7 +56,7 @@ setInterval(() => {
     const player = document.querySelector('.player');
     const gameOver = document.querySelector('.gameOver');
     const hurdle = document.querySelector('.hurdle')
-    const gameWon = document.querySelector('.gameWon')
+    // const gameWon = document.querySelector('.gameWon')
 
     // detecting red character position around x and y axis
     pX = parseInt(window.getComputedStyle(player).getPropertyValue('left'))
