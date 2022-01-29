@@ -1,9 +1,11 @@
 __________________________________________________________________________________________                             
                               Dragon Mania
 __________________________________________________________________________________________
- This is very simple and very first game I made for my son Suleman. Good thing is he loved the game 
+ .This is very simple and very first game I made for my son Suleman. Good thing is he loved the game 
  and he master it in no time.
- This game is for ages 6-8.
+ .This game is desinged for children(ages 4-8).
+ .Children over 8 and adults stay away.
+
 
  HOW TO PLAY:
 1. First we need to upload to browser , either by connecting through ```live server ```, ```npm install and npm start``` or ```npxserve.```.
