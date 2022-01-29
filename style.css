@@ -1,4 +1,7 @@
-
+/* media queries */
+@media screen and (min-width:500px){
+    alert not supported
+}
 /* setting background attributes */
 body {
    background-image: url("image.1.jpg");
@@ -16,6 +19,8 @@ body {
     position: absolute;
     bottom: 215;
     left: 60;
+    /* transform-style: preserve-3d; */
+    /* transform: perspective(500px) rotateX(30deg); */
     }
 
 #scoreContainer{
@@ -44,18 +49,35 @@ body {
 .gameOver{
     visibility: hidden;
     text-align: center;
-    font-family: fantasy ;
+    font-family: cursive ;
     color: crimson;
+    font-size:xxx-large
 }
+.gameWon{
+    visibility: hidden;
+    text-align: center;
+    font-family: cursive ;
+    color: crimson;
+    font-size:xxx-large
+}
+/* #restart{
+    visibility: hidden;
+} */
 
 /* creating player animation */
 .animatePlayer{
-    animation: player 1.2s linear
+    animation: player;
+    animation-duration:1.2s ; 
+    animation-timing-function:linear;
 }
 /* creating annimation for hurdle , by making it infinite it will keep moving */
 .animateDragon{
-    animation: animateDragon 3s linear infinite;
-    /* animation-direction: alternate; */
+    animation: animateDragon;
+    animation-duration: 2.4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    animation-direction: alternate;
 }
 
 /* player animation  */
@@ -68,6 +90,8 @@ body {
     }
     100%{
           bottom: 208;
+          transform: rotate(360deg); 
+
     }
 }
 
