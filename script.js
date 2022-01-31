@@ -125,3 +125,10 @@ function updateScore(score) {
 
 //  }
 
+// Create a media condition that targets viewports at least 768px wide
+const mediaQuery = window.matchMedia('(min-width: 768px)')
+// Check if the media query is true
+if (!mediaQuery.matches) {
+  // Then trigger an alert
+  alert('Not supported for smart devices')
+}
